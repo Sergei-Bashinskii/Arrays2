@@ -41,12 +41,12 @@ public class Main {
     public static void task3(){
         int[] arr = generateRandomArray();
         System.out.println("Задача 3");
-        double allExpenses = arr[0];
+        float allExpenses = arr[0];
         for (int i = 1; i < arr.length; i++) {
             allExpenses = allExpenses + arr[i];
         }
-        double averageExpenses = allExpenses / arr.length;
-        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей.", averageExpenses);
+        float averageExpenses = allExpenses / arr.length;
+        System.out.printf("Средняя сумма трат за месяц составила " + averageExpenses + " рублей.");
         System.out.println();
     }
 
