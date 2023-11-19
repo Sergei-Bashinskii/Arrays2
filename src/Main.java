@@ -26,13 +26,13 @@ public class Main {
     public static void task2(){
         int[] arr = generateRandomArray();
         System.out.println("Задача 2");
-        int maxExpenses = -1;
-        int minExpenses = 200_001;
+        int maxExpenses = Integer.MIN_VALUE;
+        int minExpenses = Integer.MAX_VALUE;
         for (int j : arr) {
-            if (j > maxExpenses) {
-                maxExpenses = j;
-            } else if (j < minExpenses) {
+            if (j < minExpenses) {
                 minExpenses = j;
+            } else if (j > maxExpenses) {
+                maxExpenses = j;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minExpenses + " рублей. Максимальная сумма трат за день составила " + maxExpenses + " рублей.");
